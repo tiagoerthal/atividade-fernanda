@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  color: #fff;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+h1 {
+  text-align: center;
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #8be9fd;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 5px #00f7ff inset;
+}
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row div {
+  flex: 1;
+}
+
+.checkbox-group, .radio-group {
+  margin-top: 10px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  font-weight: normal;
+  display: block;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #00f7ff, #ff00ff);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #ff00ff;
+  transform: scale(1.05);
+}
