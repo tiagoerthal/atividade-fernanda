@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Pizzaria Futurista</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Formulário Moderno</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>🍕 Pizzaria Neon</h1>
+    <h1>Cadastro</h1>
 
-  <form>
-    <label>Nome:</label>
-    <input type="text" required>
+    <form method="POST" action="#">
 
-    <label>Email:</label>
-    <input type="email" required>
+        <fieldset>
+            <legend>Informações básicas</legend>
 
-    <label>Telefone:</label>
-    <input type="tel">
+            <div class="grupo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
 
-    <label>Endereço:</label>
-    <textarea rows="2"></textarea>
+            <div class="grupo">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
 
-    <label>Tamanho da Pizza:</label>
-    <select>
-      <option>Pequena</option>
-      <option>Média</option>
-      <option>Grande</option>
-      <option>Gigante</option>
-    </select>
+        </fieldset>
 
-    <label>Sabor:</label>
-    <select>
-      <option>Calabresa</option>
-      <option>Frango com Catupiry</option>
-      <option>Quatro Queijos</option>
-      <option>Portuguesa</option>
-      <option>Chocolate</option>
-    </select>
+        <fieldset>
+            <legend>Informações adicionais</legend>
 
-    <label>Borda:</label>
-    <div class="radio-group">
-      <label><input type="radio" name="borda"> Sem borda</label>
-      <label><input type="radio" name="borda"> Catupiry</label>
-      <label><input type="radio" name="borda"> Cheddar</label>
-    </div>
+            <div class="grupo">
+                <span>Gênero</span>
+                <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+                <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+                <label><input type="radio" name="genero" value="outro"> Outro</label>
+            </div>
 
-    <label>Extras:</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox"> Bacon</label>
-      <label><input type="checkbox"> Queijo extra</label>
-      <label><input type="checkbox"> Azeitona</label>
-      <label><input type="checkbox"> Molho especial</label>
-    </div>
+            <div class="grupo">
+                <span>Interesses</span>
+                <label><input type="checkbox" name="interesses" value="tecnologia"> Tecnologia</label>
+                <label><input type="checkbox" name="interesses" value="esportes"> Esportes</label>
+                <label><input type="checkbox" name="interesses" value="musica"> Música</label>
+                <label><input type="checkbox" name="interesses" value="jogos"> Jogos</label>
+            </div>
 
-    <label>Bebida:</label>
-    <select>
-      <option>Refrigerante</option>
-      <option>Suco</option>
-      <option>Água</option>
-      <option>Energético</option>
-    </select>
+            <div class="grupo">
+                <label for="pais">País</label>
+                <select id="pais" name="pais">
+                    <option>Brasil</option>
+                    <option>Portugal</option>
+                    <option>Estados Unidos</option>
+                </select>
+            </div>
 
-    <label>Data de entrega:</label>
-    <input type="date">
+        </fieldset>
 
-    <label>Hora de entrega:</label>
-    <input type="time">
+        <fieldset>
+            <legend>Outros campos</legend>
 
-    <label>Observações:</label>
-    <textarea rows="3"></textarea>
+            <div class="grupo">
+                <label for="foto">Foto de perfil</label>
+                <input type="file" id="foto" name="foto">
+            </div>
 
-    <button type="submit">Finalizar Pedido 🚀</button>
-  </form>
+            <div class="grupo">
+                <label for="cor">Cor favorita</label>
+                <input type="color" id="cor" name="cor">
+            </div>
+
+            <div class="grupo">
+                <label for="satisfacao">Nível de satisfação</label>
+                <input type="range" id="satisfacao" name="satisfacao" min="0" max="10">
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+
+            <div class="grupo">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+            </div>
+
+        </fieldset>
+
+        <div class="botoes">
+            <button type="submit">Enviar</button>
+            <button type="reset" class="limpar">Limpar</button>
+        </div>
+
+    </form>
 </div>
 
 </body>
