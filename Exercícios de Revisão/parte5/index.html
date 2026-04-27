@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora de IMC</h1>
+
+        <label>Nome:</label>
+        <input type="text" id="nome">
+
+        <label>Altura (cm):</label>
+        <input type="number" id="altura">
+
+        <label>Peso (kg):</label>
+        <input type="number" id="peso">
+
+        <button onclick="calcularIMC()">Calcular</button>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            let nome = document.getElementById("nome").value;
+            let altura = parseFloat(document.getElementById("altura").value);
+            let peso = parseFloat(document.getElementById("peso").value);
+
+            altura = altura / 100;
+
+            let imc = peso / (altura * altura);
+            let classificacao;
+
+            if (imc < 16) {
+                classificacao = "Baixo peso muito grave";
+            } else if (imc < 17) {
+                classificacao = "Baixo peso grave";
+            } else if (imc < 18.5) {
+                classificacao = "Baixo peso";
+            } else if (imc < 25) {
+                classificacao = "Peso normal";
+            } else if (imc < 30) {
+                classificacao = "Sobrepeso";
+            } else if (imc < 35) {
+                classificacao = "Obesidade grau I";
+            } else if (imc < 40) {
+                classificacao = "Obesidade grau II";
+            } else {
+                classificacao = "Obesidade grau III";
+            }
+
+            document.getElementById("resultado").innerText =
+                nome + " possui índice de massa corporal igual a " +
+                imc.toFixed(2) + ", sendo classificado como: " + classificacao + ".";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+
+    <!-- Ligação com o CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Calculadora</h1>
+
+    <p>Digite o primeiro número:</p>
+    <input type="number" id="num1">
+
+    <p>Digite o segundo número:</p>
+    <input type="number" id="num2">
+
+    <p>Escolha a operação:</p>
+    <select id="operacao">
+        <option value="+">Soma (+)</option>
+        <option value="-">Subtração (-)</option>
+        <option value="*">Multiplicação (*)</option>
+        <option value="/">Divisão (/)</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <h2 id="resultado"></h2>
+
+</div>
+
+<script>
+    function calcular() {
+        let n1 = parseFloat(document.getElementById("num1").value);
+        let n2 = parseFloat(document.getElementById("num2").value);
+        let op = document.getElementById("operacao").value;
+        let res;
+
+        if (op == "+") {
+            res = n1 + n2;
+        } else if (op == "-") {
+            res = n1 - n2;
+        } else if (op == "*") {
+            res = n1 * n2;
+        } else if (op == "/") {
+            res = n1 / n2;
+        }
+
+        document.getElementById("resultado").innerText = "Resultado: " + res;
+    }
+</script>
+
+</body>
+</html>
